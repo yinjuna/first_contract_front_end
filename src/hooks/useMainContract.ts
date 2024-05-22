@@ -21,7 +21,7 @@ export function useMainContract() {
   const [balance, setBalance] = useState<null | number>(0)
   const mainContract = useAsyncInitialize(async () => {
     if (!client) return;
-    const contract = new MainContract(
+      const contract = new MainContract(
       Address.parse("EQDPmhtrOPitFTXB8otenAJXU9z_jaktXq5-qDOClYBKrSax") // replace with your address from tutorial 2 step 8
     );
     return client.open(contract) as OpenedContract<MainContract>;
